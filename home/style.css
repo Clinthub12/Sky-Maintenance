@@ -6,20 +6,37 @@ html, body {
     text-align: center;
 }
 
-.navbar {
-    position: relative;
-    margin-top: -3.5vw;
+.logo {
+    width: 100%;
+    background-color: #d6ceb7;
+    height: auto; 
+    position: fixed;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: center;
-    width: 100%; /* Ensures the navbar spans the entire width of the page */
-    border-top: 1px solid #bab5a4; /* Adds a top border */
-    border-bottom: 1px solid #bab5a4; /* Adds a bottom border */
+    align-items: center;
+}
+
+.logo-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    position: fixed;
+    top: 8vw;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid #bab5a4;
+    border-bottom: 1px solid #bab5a4;
+    background-color: #d6ceb7;
     z-index: 10;
 }
 
 .nav-items {
     display: flex;
-    /* margin-left: 100px; */
     text-align: center;
     list-style: none;
     padding: 0;
@@ -35,12 +52,12 @@ html, body {
     font-size: 1vw;
     color: #333;
     padding-bottom: 5px;
-    position: relative; /* Required for pseudo-element positioning */
+    position: relative;
     transition: color 0.3s ease;
 }
 
 .nav-items a:hover {
-    color: #726e5e; /* Changes text color on hover */
+    color: #726e5e;
 }
 
 .nav-items a::after {
@@ -51,19 +68,31 @@ html, body {
     width: 0;
     height: 2px;
     background-color: #726e5e;
-    transition: width 0.3s ease; /* Smooth transition for the animation */
+    transition: width 0.3s ease;
 }
 
 .nav-items a:hover::after {
     color: #726e5e;
-    width: 100%; /* Expands the border animation */
+    width: 100%;
 }
 
-.logo-image {
-    width: 65%;
-    height: 25%; /* Adjust height to match the cropped area */
-    clip-path: inset(0% 0 20% 0);
+.gallery {
+    position: relative;
+    margin-top: 20vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides img {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 60vh;
     object-fit: cover;
-    display: block; /* Ensures the image behaves like a block element */
-    margin: 0 auto; /* Centers the image horizontally */
+    filter: grayscale(100%);
 }
