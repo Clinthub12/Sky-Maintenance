@@ -1,0 +1,15 @@
+html, body {
+    background: linear-gradient(to bottom, #d6ceb7, white);
+    font-family: Arial, sans-serif;
+    height: 100%;
+    position: relative;
+}
+
+.logo-image {
+    width: 65%;
+    height: 25%; /* Adjust height to match the cropped area */
+    clip-path: inset(0% 0 20% 0);
+    object-fit: cover;
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+}
